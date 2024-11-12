@@ -1,4 +1,100 @@
 @font-face {
-  font-family: WorkSans;
-  src: url("../assets/fonts/static/WorkSans-Regular.ttf");
+  font-family: "WorkSans";
+  src: url("../assets/fonts/static/WorkSans-Bold.ttf");
+  src: url("../assets/fonts/static/WorkSans-Regular.ttf"), url("../assets/fonts/static/WorkSans-SemiBold.ttf"), url("../assets/fonts/WorkSans-Italic-VariableFont_wght.ttf"), url("../assets/fonts/WorkSans-VariableFont_wght.ttf");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.3;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "WorkSans", serif;
+  color: hsl(292, 16%, 49%);
+  background-image: linear-gradient(to bottom, transparent 50%, hsl(275, 100%, 97%) 50%), url("../assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, top;
+  background-size: 100% 100%, cover;
+}
+
+#faq-container {
+  max-width: 26.25rem;
+  margin: 1.875rem 1.25rem;
+  background: hsl(0, 0%, 100%);
+  padding: 1.25rem 1.5625rem;
+  border-radius: 5px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.6), 0 0 8px rgba(0, 0, 0, 0.6), 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+#faq-container .faq-heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.875rem;
+  margin: 0.3125rem 0;
+}
+#faq-container .faq-heading h1 {
+  font-size: 2.1875rem;
+  font-weight: 900;
+  color: hsl(292, 42%, 14%);
+}
+#faq-container .question-main-container {
+  color: hsl(292, 42%, 14%);
+  opacity: 0.9;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid hsl(292, 16%, 49%);
+}
+#faq-container .quest-four {
+  border-bottom: none;
+}
+#faq-container .question-sect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.9375rem;
+  padding: 1.25rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+#faq-container .question-sect img.active {
+  src: url("../assets/images/icon-minus.svg");
+}
+#faq-container .answer-paragh {
+  font-size: 1.25rem;
+  transition: all 0.5s ease-in;
+}
+#faq-container .hide {
+  display: none;
+}
+
+footer {
+  font-size: 0.5625rem;
 }/*# sourceMappingURL=style.css.map */

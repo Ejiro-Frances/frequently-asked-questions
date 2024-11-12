@@ -1,3 +1,66 @@
 @import "./utilities/fonts.sass"
 @import "./utilities/colors.sass"
 @import "./utilities/reset.sass"
+@import "./utilities/index.sass"
+@import "./utilities/mixins.sass"
+
+body
+  @include flex-display
+  min-height: 100vh
+  font-family: "WorkSans", serif
+  color: $grayish-purple
+  background-image: linear-gradient(to bottom, transparent 50%, $light-pink 50%), url("../assets/images/background-pattern-mobile.svg") // Image layer
+  background-repeat: no-repeat, no-repeat
+  background-position: center, top // Position the color and image
+  background-size: 100% 100%, cover // Make color fill and image cover
+
+
+#faq-container
+  max-width: px-rem(420)
+  margin: px-rem(30) px-rem(20)
+  background: $white
+  padding: px-rem(20) px-rem(25)
+  border-radius: 5px
+  box-shadow: 0 0 1px rgba(0,0,0,0.6),  0 0 8px rgba(0,0,0,0.6),  0 2px 8px rgba(0,0,0,0.6)
+
+  .faq-heading
+    @include flex-between($justify: flex-start)
+    gap: px-rem(30)
+    margin: px-rem(5) 0
+
+    h1
+      font-size: px-rem(35)
+      font-weight: 900
+      color: $dark-purple
+  
+  .question-main-container
+    color: $dark-purple
+    opacity: .9 
+    padding-bottom: px-rem(20)
+    border-bottom: 1px solid $grayish-purple
+
+  .quest-four
+    border-bottom: none
+
+  .question-sect
+    @include flex-between
+    gap: px-rem(15)
+    padding: px-rem(20) 0
+    font-size: px-rem(16)
+    font-weight:600
+    cursor: pointer
+    
+    img
+      &.active
+        src: url("../assets/images/icon-minus.svg")
+
+  .answer-paragh
+    font-size: px-rem(20)
+    transition: all 0.5s ease-in
+
+  .hide
+    display: none
+
+
+footer
+  font-size: px-rem(9)
