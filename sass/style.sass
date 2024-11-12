@@ -1,7 +1,6 @@
 @import "./utilities/fonts.sass"
 @import "./utilities/colors.sass"
 @import "./utilities/reset.sass"
-@import "./utilities/index.sass"
 @import "./utilities/mixins.sass"
 
 body
@@ -13,6 +12,7 @@ body
   background-repeat: no-repeat, no-repeat
   background-position: center, top // Position the color and image
   background-size: 100% 100%, cover // Make color fill and image cover
+  background-attachment: fixed
 
 
 #faq-container
@@ -29,34 +29,43 @@ body
     margin: px-rem(5) 0
 
     h1
-      font-size: px-rem(35)
-      font-weight: 900
+      font-size: px-rem(55)
+      font-weight: 700
       color: $dark-purple
   
   .question-main-container
     color: $dark-purple
     opacity: .9 
-    padding-bottom: px-rem(20)
-    border-bottom: 1px solid $grayish-purple
+    padding-bottom: px-rem(5)
+    border-bottom: 2px solid $light-pink
+    border-radius: 2px
 
   .quest-four
     border-bottom: none
 
   .question-sect
     @include flex-between
-    gap: px-rem(15)
+    gap: px-rem(10)
     padding: px-rem(20) 0
     font-size: px-rem(16)
     font-weight:600
     cursor: pointer
-    
-    img
+
+    h2:hover
+      color: $grayish-purple
+     
+    .plusImg
+      src: url("../assets/images/icon-plus.svg")
+      transition: all 1s ease
+
       &.active
         src: url("../assets/images/icon-minus.svg")
 
+
   .answer-paragh
     font-size: px-rem(20)
-    transition: all 0.5s ease-in
+    color: $grayish-purple
+    opacity: .7
 
   .hide
     display: none
@@ -64,3 +73,11 @@ body
 
 footer
   font-size: px-rem(9)
+
+
+@media (min-width:40rem)
+  body
+    background-image: linear-gradient(to bottom, transparent 50%, $light-pink 50%), url("../assets/images/background-pattern-desktop.svg")
+  
+    #faq-container
+      max-width: px-rem(720)
