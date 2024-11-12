@@ -62,7 +62,7 @@ body {
   margin: 0.3125rem 0;
 }
 #faq-container .faq-heading h1 {
-  font-size: 3.4375rem;
+  font-size: 2.1875rem;
   font-weight: 700;
   color: hsl(292, 42%, 14%);
 }
@@ -82,7 +82,7 @@ body {
   align-items: center;
   gap: 0.625rem;
   padding: 1.25rem 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
 }
@@ -115,5 +115,11 @@ footer {
   }
   body #faq-container {
     max-width: 45rem;
+  }
+  body #faq-container h1 {
+    font-size: 3.4375rem;
+  }
+  body .question-sect {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */
