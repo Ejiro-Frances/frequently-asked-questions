@@ -12,11 +12,10 @@ faqContainers.forEach((container) => {
     // Toggle the 'active' class on the image to switch icons
     img.classList.toggle("active");
 
-    // Change the image source based on the active class
-    if (img.classList.contains("active")) {
-      img.src = "./assets/images/icon-minus.svg"; // Set to minus image
+    if (paragraph.classList.contains("hide")) {
+      img.src = "./assets/images/icon-plus.svg";
     } else {
-      img.src = "./assets/images/icon-plus.svg"; // Set back to plus image
+      img.src = "./assets/images/icon-minus.svg";
     }
   });
 });
