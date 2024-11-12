@@ -1,0 +1,13 @@
+@use "sass:math"
+@font-face
+  font-family: WorkSans
+  src: url("../assets/fonts/static/WorkSans-Regular.ttf")
+
+
+$base-font: 16
+
+// write a function to convert font
+@function px-to-rem($px-value)
+  @return math.div($px-value, $base-font)*1rem
+
+
